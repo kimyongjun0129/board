@@ -10,8 +10,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.util.Optional;
-
 @Service
 @RequiredArgsConstructor
 public class MemberService {
@@ -29,15 +27,9 @@ public class MemberService {
 
     public MemberResponseDto findById(Long id) {
 
-        Optional<Member> member = memberRepository.findById(id);
+        Member member = memberRepository.findByIdOrElseThrow(id);
 
-        if(member.isEmpty()) {
-            throw new ResponseStatusException(HttpStatus.NO_CONTENT, "Does not exists id : " + id);
-        }
-
-        Member findMember = member.get();
-
-        return new MemberResponseDto(findMember.getUsername(), findMember.getAge());
+        return new MemberResponseDto(member.getUsername(), member.getAge());
     }
 
     @Transactional
