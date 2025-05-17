@@ -14,5 +14,9 @@ public class Board extends BaseEntity{
     private String title;
 
     @Column(columnDefinition = "longtext")
-    private String content;
+    private String contents;
+
+    @ManyToOne
+    @JoinColumn(name = "member_id")
+    private Member member;
 }
