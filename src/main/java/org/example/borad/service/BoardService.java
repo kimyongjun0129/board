@@ -41,4 +41,10 @@ public class BoardService {
 
         return new BoradWithAgeResposeDto(board.getTitle(), board.getContents(), member.getAge());
     }
+
+    public void delete(Long id) {
+        Board borad = boardRepository.findByIdOrElseThrow(id);
+
+        boardRepository.delete(borad);
+    }
 }
