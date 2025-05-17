@@ -2,6 +2,7 @@ package org.example.borad.service;
 
 import lombok.RequiredArgsConstructor;
 import org.example.borad.dto.BoardResponseDto;
+import org.example.borad.dto.BoradWithAgeResposeDto;
 import org.example.borad.entity.Board;
 import org.example.borad.entity.Member;
 import org.example.borad.repository.BoardRepository;
@@ -32,5 +33,12 @@ public class BoardService {
                 .stream()
                 .map(BoardResponseDto::toDto)
                 .toList();
+    }
+
+    public BoradWithAgeResposeDto findById(Long id) {
+        Board board = boardRepository.findByIdOrElseThrow(id);
+        Member member = board.getMember();
+
+        return new BoradWithAgeResposeDto(board.getTitle(), board.getContents(), member.getAge());
     }
 }
