@@ -7,6 +7,7 @@ import org.example.borad.entity.Member;
 import org.example.borad.repository.MemberRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Optional;
@@ -37,5 +38,17 @@ public class MemberService {
         Member findMember = member.get();
 
         return new MemberResponseDto(findMember.getUsername(), findMember.getAge());
+    }
+
+    @Transactional
+    public void updatePasssword(Long id, String oldPassword, String newPassword) {
+
+        Member member = memberRepository.findByIdOrElseThrow(id);
+
+        if(!member.getPassword().equals(oldPassword)) {
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "비밀번호가 일치하지 않습니다.");
+        }
+
+        member.updatePassword(newPassword);
     }
 }
