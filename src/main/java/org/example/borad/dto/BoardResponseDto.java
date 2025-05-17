@@ -1,6 +1,7 @@
 package org.example.borad.dto;
 
 import lombok.Getter;
+import org.example.borad.entity.Board;
 
 @Getter
 public class BoardResponseDto {
@@ -15,5 +16,9 @@ public class BoardResponseDto {
         this.id = id;
         this.title = title;
         this.contents = contents;
+    }
+
+    public static BoardResponseDto toDto(Board board) {
+        return new BoardResponseDto(board.getId(), board.getTitle(), board.getContents());
     }
 }
