@@ -1,7 +1,7 @@
-package org.example.borad.dto;
+package org.example.board.dto;
 
 import lombok.Getter;
-import org.example.borad.entity.Board;
+import org.example.board.entity.Board;
 
 @Getter
 public class BoardResponseDto {

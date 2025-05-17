@@ -1,10 +1,10 @@
-package org.example.borad.service;
+package org.example.board.service;
 
 import lombok.RequiredArgsConstructor;
-import org.example.borad.dto.MemberResponseDto;
-import org.example.borad.dto.SignUpResponseDto;
-import org.example.borad.entity.Member;
-import org.example.borad.repository.MemberRepository;
+import org.example.board.dto.MemberResponseDto;
+import org.example.board.dto.SignUpResponseDto;
+import org.example.board.entity.Member;
+import org.example.board.repository.MemberRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

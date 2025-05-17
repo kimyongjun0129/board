@@ -1,10 +1,10 @@
-package org.example.borad.controller;
+package org.example.board.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.borad.dto.BoardResponseDto;
-import org.example.borad.dto.BoradWithAgeResposeDto;
-import org.example.borad.dto.CreateBoardRequestDto;
-import org.example.borad.service.BoardService;
+import org.example.board.dto.BoardResponseDto;
+import org.example.board.dto.BoradWithAgeResposeDto;
+import org.example.board.dto.CreateBoardRequestDto;
+import org.example.board.service.BoardService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

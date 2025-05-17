@@ -1,11 +1,11 @@
-package org.example.borad.controller;
+package org.example.board.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.borad.dto.MemberResponseDto;
-import org.example.borad.dto.SignUpRequestDto;
-import org.example.borad.dto.SignUpResponseDto;
-import org.example.borad.dto.UpdatePasswordRequestDto;
-import org.example.borad.service.MemberService;
+import org.example.board.dto.MemberResponseDto;
+import org.example.board.dto.SignUpRequestDto;
+import org.example.board.dto.SignUpResponseDto;
+import org.example.board.dto.UpdatePasswordRequestDto;
+import org.example.board.service.MemberService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

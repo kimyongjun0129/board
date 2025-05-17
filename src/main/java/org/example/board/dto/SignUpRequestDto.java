@@ -1,4 +1,4 @@
-package org.example.borad.dto;
+package org.example.board.dto;
 
 import lombok.Getter;
 

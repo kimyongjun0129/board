@@ -1,12 +1,12 @@
-package org.example.borad.service;
+package org.example.board.service;
 
 import lombok.RequiredArgsConstructor;
-import org.example.borad.dto.BoardResponseDto;
-import org.example.borad.dto.BoradWithAgeResposeDto;
-import org.example.borad.entity.Board;
-import org.example.borad.entity.Member;
-import org.example.borad.repository.BoardRepository;
-import org.example.borad.repository.MemberRepository;
+import org.example.board.dto.BoardResponseDto;
+import org.example.board.dto.BoradWithAgeResposeDto;
+import org.example.board.entity.Board;
+import org.example.board.entity.Member;
+import org.example.board.repository.BoardRepository;
+import org.example.board.repository.MemberRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

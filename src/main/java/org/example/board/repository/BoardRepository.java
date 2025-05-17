@@ -1,6 +1,6 @@
-package org.example.borad.repository;
+package org.example.board.repository;
 
-import org.example.borad.entity.Board;
+import org.example.board.entity.Board;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;

@@ -1,4 +1,4 @@
-package org.example.borad.entity;
+package org.example.board.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;
